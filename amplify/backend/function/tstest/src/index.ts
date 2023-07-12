@@ -1,0 +1,19 @@
+interface Event {
+  key1: string;
+  key2: string;
+  key3: string;
+}
+
+interface TSTestResponse {
+  statusCode: number;
+  body: string;
+}
+
+export const handler = async (event: Event): Promise<TSTestResponse> => {
+  console.log(`EVENT: ${JSON.stringify(event)}`);
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify('Hello from Lambda!'),
+  };
+};

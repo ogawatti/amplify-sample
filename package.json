@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "amplify:tstest": "cd amplify/backend/function/tstest/src && tsc && cd -"
+  }
+}
