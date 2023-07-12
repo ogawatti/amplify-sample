@@ -5,10 +5,15 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.92",
+    "@types/node": "^18",
+    "@typescript-eslint/eslint-plugin": "^5",
+    "@typescript-eslint/parser": "^5",
+    "eslint": "^8.44.0",
     "typescript": "^5.1.6"
   }
 }
