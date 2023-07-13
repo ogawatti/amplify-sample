@@ -1,7 +1,10 @@
 module.exports = {
   root: true,
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
+  plugins: [
+    "@typescript-eslint",
+    "jest",
+  ],
   env: {
     browser: true,
     es2021: true,
@@ -22,6 +25,8 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
     "prettier",
   ],
   rules: {
@@ -42,6 +47,8 @@ module.exports = {
       {
         "SwitchCase": 1
       }
-    ]
+    ],
+    "jest/consistent-test-it": ["error", {"fn": "it"}],
+    "jest/require-top-level-describe": ["error"],
   },
 };
