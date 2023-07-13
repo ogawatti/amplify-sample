@@ -11,7 +11,7 @@ interface TSTestResponse {
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const handler = async (event: EventTSTest): Promise<TSTestResponse> => {
-  console.log(`EVENT: ${JSON.stringify(event)}`)
+  console.log(`EVENT: ${JSON.stringify(event)}`);
 
   return {
     statusCode: 200,
