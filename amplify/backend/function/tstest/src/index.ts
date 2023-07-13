@@ -9,8 +9,11 @@ interface TSTestResponse {
   body: string;
 }
 
+import AWS from 'aws-sdk';
+
 // eslint-disable-next-line @typescript-eslint/require-await
 export const handler = async (event: EventTSTest): Promise<TSTestResponse> => {
+  console.log(AWS);
   console.log(`EVENT: ${JSON.stringify(event)}`)
 
   return {

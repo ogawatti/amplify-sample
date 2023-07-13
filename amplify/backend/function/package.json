@@ -1,0 +1,11 @@
+{
+  "name": "function",
+  "workspaces": [
+    "tstest"
+  ],
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "aws-sdk": "^2.1414.0"
+  }
+}
