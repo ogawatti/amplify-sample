@@ -11,5 +11,39 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
+  },
+  "parameters": {
+    "AMPLIFY_function_tstest_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "tstest"
+        }
+      ]
+    },
+    "AMPLIFY_function_tstest_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "tstest"
+        }
+      ]
+    },
+    "AMPLIFY_function_vpcfunc_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "vpcfunc"
+        }
+      ]
+    },
+    "AMPLIFY_function_vpcfunc_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "vpcfunc"
+        }
+      ]
+    }
   }
 }
