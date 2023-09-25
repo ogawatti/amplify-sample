@@ -1,7 +1,4 @@
-/* Amplify Params - DO NOT EDIT
-	ENV
-	REGION
-Amplify Params - DO NOT EDIT */"use strict";
+"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -12,13 +9,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.handler = void 0;
-// eslint-disable-next-line @typescript-eslint/require-await
-const handler = (event) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(`EVENT: ${JSON.stringify(event)}`);
-    return {
-        statusCode: 200,
-        body: JSON.stringify('Hello from Lambda!'),
-    };
+const index_1 = require("./../index");
+describe('TSTest', () => {
+    describe('handler', () => {
+        const event = {
+            key1: 'test1',
+            key2: 'test2',
+            key3: 'test3',
+        };
+        it('returns statusCode and body', () => __awaiter(void 0, void 0, void 0, function* () {
+            const spy = jest.spyOn(console, 'log').mockImplementation();
+            const { statusCode, body } = yield (0, index_1.handler)(event);
+            const data = JSON.parse(body);
+            expect(statusCode).toBe(200);
+            expect(data).toBe('Hello from Lambda!');
+            expect(spy).toHaveBeenNthCalledWith(1, expect.stringMatching(/^EVENT: /));
+        }));
+    });
 });
-exports.handler = handler;

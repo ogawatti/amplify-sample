@@ -1,6 +1,6 @@
 {
   "license": "UNLICENSED",
   "scripts": {
-    "amplify:tstest": "cd amplify/backend/function/tstest/src && tsc && cd -"
+    "amplify:tstest": "cd amplify/backend/function/tstest/src && yarn && tsc && cd -"
   }
 }
