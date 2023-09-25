@@ -2,5 +2,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "amplify:tstest": "cd amplify/backend/function/tstest/src && yarn && tsc && cd -"
+  },
+  "devDependencies": {
+    "aws-cdk": "^2.97.0"
   }
 }
